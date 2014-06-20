@@ -7,7 +7,7 @@ $cookie = "";
 $URL = "http://www.gn00.com/plugin.php?mobile=1";
 // 获取formhash
 $UserAgent = 'Mozilla/5.0 (Linux; Android 4.1; Galaxy Nexus Build/JRN84D, compatible iPhone) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19';
-$str = loadcode($cookie,$URL);
+$str = loadcode($cookie,$URL,$UserAgent);
 preg_match_all('#formhash=(.+)&amp#sU',$str,$m);
 // 设定POST信息
 $data = 'formhash='.$m[1][0].'&qdxq=yl&qdmode=3&todaysay=&fastreply=0';
